@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário LogiPeças - Visão do Almoxarifado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="#" method="POST">
+            <h1>Pesquisa para o Novo Sistema Interno LogiPeças</h1>
+            <p class="description">Sua experiência e conhecimento são cruciais para o desenvolvimento de um sistema que otimize as operações e a gestão de estoque da LogiPeças.</p>
+
+            <div class="form-section">
+                <h2><span>👥</span>Seção 1: Identificação do Colaborador</h2>
+                <div class="question-group">
+                    <label>1. Qual seu cargo/função principal no setor de Almoxarifado?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="cargo" value="estoquista" required> Estoquista / Separador
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="cargo" value="conferente"> Conferente
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="cargo" value="gerente"> Gerente do Almoxarifado
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="cargo" value="outro"> Outro (especifique se desejar)
+                    </label>
+                </div>
+                <div class="question-group">
+                    <label>2. Há quanto tempo você trabalha neste setor da LogiPeças?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_setor" value="menos_1a" required> Menos de 1 ano
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_setor" value="1a_3a"> 1 a 3 anos
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_setor" value="mais_3a"> Mais de 3 anos
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>📦</span>Seção 2: Processos Atuais (Sua Rotina no Estoque)</h2>
+                <div class="question-group">
+                    <label>3. Quando um pedido de venda é gerado, como ele chega para você no Almoxarifado?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="recebe_pedido" value="papel" required> Via impressa (papel) pelo vendedor.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="recebe_pedido" value="whatsapp"> Notificação informal (WhatsApp, telefone).
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="recebe_pedido" value="sistema_antigo"> Visualizo em alguma planilha ou sistema antigo.
+                    </label>
+                </div>
+                <div class="question-group">
+                    <label>4. Como você realiza a baixa (saída) de uma peça do estoque após a venda?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="baixa_estoque" value="planilha" required> Anoto manualmente em uma planilha.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="baixa_estoque" value="caderno"> Anoto em um caderno/prancheta física.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="baixa_estoque" value="sistema_antigo"> Dou baixa em um sistema de gestão antigo.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="baixa_estoque" value="nao_dou_baixa"> Essa tarefa não é de minha responsabilidade direta.
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>🚫</span>Seção 3: Problemas e Gargalos Percebidos</h2>
+                <div class="question-group">
+                    <label for="maior_problema_estoque">5. Qual é o MAIOR problema ou dificuldade que você enfrenta no dia a dia do Almoxarifado?</label>
+                    <textarea id="maior_problema_estoque" name="maior_problema_estoque" required></textarea>
+                </div>
+                <div class="question-group">
+                    <label>6. Com que frequência ocorre o "furo de estoque"? (Quando o sistema/planilha indica uma quantidade, mas o físico é diferente)</label>
+                    <label class="radio-option">
+                        <input type="radio" name="furo_estoque" value="toda_hora" required> Toda hora, várias vezes ao dia.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="furo_estoque" value="uma_vez_dia"> Pelo menos uma vez ao dia.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="furo_estoque" value="semanal"> Algumas vezes por semana.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="furo_estoque" value="raramente"> Raramente.
+                    </label>
+                </div>
+                <div class="question-group">
+                    <label>7. Qual a maior dificuldade ao guardar uma peça nova ou encontrar uma peça já estocada?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="dificuldade_encontrar" value="sem_lugar_fixo" required> Não há um endereçamento ou lugar fixo para cada item.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="dificuldade_encontrar" value="sem_info_sistema"> O sistema atual não informa a localização exata da peça.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="dificuldade_encontrar" value="misturadas"> Peças similares ou de diferentes códigos ficam misturadas.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="dificuldade_encontrar" value="falta_espaco"> Falta de espaço físico adequado para organização.
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>✨</span>Seção 4: Necessidades e Expectativas para o Novo Sistema</h2>
+                <div class="question-group">
+                    <label>8. Numa escala de 0 (Inútil) a 5 (Muito Útil), o quanto o novo sistema deveria oferecer os seguintes recursos?</label>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recurso</th>
+                                <th>0 (Inútil)</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5 (Muito Útil)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Utilizar Coletor de Dados (leitor de código de barras) para entradas e saídas</td>
+                                <td><input type="radio" name="grid_coletor" value="0" required></td>
+                                <td><input type="radio" name="grid_coletor" value="1"></td>
+                                <td><input type="radio" name="grid_coletor" value="2"></td>
+                                <td><input type="radio" name="grid_coletor" value="3"></td>
+                                <td><input type="radio" name="grid_coletor" value="4"></td>
+                                <td><input type="radio" name="grid_coletor" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>O sistema informar a "Localização Exata" da peça (ex: "Corredor B, Prateleira 5, Posição 2")</td>
+                                <td><input type="radio" name="grid_localizacao" value="0" required></td>
+                                <td><input type="radio" name="grid_localizacao" value="1"></td>
+                                <td><input type="radio" name="grid_localizacao" value="2"></td>
+                                <td><input type="radio" name="grid_localizacao" value="3"></td>
+                                <td><input type="radio" name="grid_localizacao" value="4"></td>
+                                <td><input type="radio" name="grid_localizacao" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>O sistema emitir alertas automáticos quando o estoque de uma peça atingir o nível mínimo</td>
+                                <td><input type="radio" name="grid_estoque_min" value="0" required></td>
+                                <td><input type="radio" name="grid_estoque_min" value="1"></td>
+                                <td><input type="radio" name="grid_estoque_min" value="2"></td>
+                                <td><input type="radio" name="grid_estoque_min" value="3"></td>
+                                <td><input type="radio" name="grid_estoque_min" value="4"></td>
+                                <td><input type="radio" name="grid_estoque_min" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>Pedidos de venda já chegarem "prontos" em um dispositivo móvel (celular/coletor) com rota de separação</td>
+                                <td><input type="radio" name="grid_pedido_pronto" value="0" required></td>
+                                <td><input type="radio" name="grid_pedido_pronto" value="1"></td>
+                                <td><input type="radio" name="grid_pedido_pronto" value="2"></td>
+                                <td><input type="radio" name="grid_pedido_pronto" value="3"></td>
+                                <td><input type="radio" name="grid_pedido_pronto" value="4"></td>
+                                <td><input type="radio" name="grid_pedido_pronto" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>✍️</span>Seção 5: Sugestões Adicionais</h2>
+                <div class="question-group">
+                    <label for="sugestao_estoque">9. Se você pudesse sugerir UMA mudança ou funcionalidade para otimizar o processo de estoque na LogiPeças, qual seria?</label>
+                    <textarea id="sugestao_estoque" name="sugestao_estoque"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar Respostas</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

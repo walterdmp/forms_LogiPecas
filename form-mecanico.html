@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário LogiPeças - Visão do Mecânico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="#" method="POST">
+            <h1>Pesquisa para o Novo Sistema LogiPeças</h1>
+            <p class="description">Sua opinião é fundamental para construirmos uma solução que realmente atenda às suas necessidades como cliente e parceiro da LogiPeças.</p>
+
+            <div class="form-section">
+                <h2><span>👤</span>Seção 1: Identificação do Cliente</h2>
+                <div class="question-group">
+                    <label>1. Qual sua principal relação com a LogiPeças?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="relacao" value="mecanico" required> Dono de oficina / Mecânico (compro peças para meus clientes)
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="relacao" value="consumidor"> Consumidor final (compro peças para meu próprio veículo)
+                    </label>
+                </div>
+                <div class="question-group">
+                    <label>2. Há quanto tempo você é cliente da LogiPeças?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_cliente" value="menos_6m" required> Menos de 6 meses
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_cliente" value="6m_2a"> Entre 6 meses e 2 anos
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_cliente" value="mais_2a"> Mais de 2 anos
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>🛒</span>Seção 2: Processos Atuais (Sua Experiência de Compra)</h2>
+                <div class="question-group">
+                    <label>3. Qual o principal canal que você utiliza para fazer um pedido de peça?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="metodo_pedido" value="balcao" required> Visita presencial ao balcão
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="metodo_pedido" value="telefone"> Contato telefônico
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="metodo_pedido" value="whatsapp"> Mensagens via WhatsApp
+                    </label>
+                </div>
+                <div class="question-group">
+                    <label>4. Para verificar a disponibilidade de uma peça em estoque, qual é a sua experiência atual?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="consulta_estoque" value="na_hora" required> O vendedor informa a disponibilidade prontamente.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="consulta_estoque" value="demora"> Há uma espera até o vendedor verificar no estoque físico.
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="consulta_estoque" value="erro"> Frequentes informações incorretas de estoque (diz que tem, mas não tem).
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>⚠️</span>Seção 3: Problemas e Gargalos Percebidos</h2>
+                <div class="question-group">
+                    <label for="maior_problema_mecanico">5. Qual é o MAIOR problema ou dificuldade que você enfrenta atualmente ao comprar na LogiPeças?</label>
+                    <textarea id="maior_problema_mecanico" name="maior_problema_mecanico" required></textarea>
+                </div>
+                <div class="question-group">
+                    <label>6. Com que frequência você recebe uma peça incorreta (modelo, lado, aplicação errada)?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="frequencia_erro" value="nunca" required> Nunca ou quase nunca
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="frequencia_erro" value="as_vezes"> Acontece ocasionalmente
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="frequencia_erro" value="frequente"> Acontece com frequência
+                    </label>
+                </div>
+                <div class="question-group">
+                    <label>7. Como você avalia o tempo de espera desde a realização do pedido até o recebimento da peça?</label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_espera" value="rapido" required> Rápido e satisfatório (não prejudica meu cronograma)
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_espera" value="aceitavel"> Aceitável, mas há espaço para melhoria
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="tempo_espera" value="lento"> Lento, frequentemente atrasa meu trabalho (ex: veículo parado no elevador)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>💡</span>Seção 4: Necessidades e Expectativas para o Novo Sistema</h2>
+                <div class="question-group">
+                    <label>8. Numa escala de 0 (Inútil) a 5 (Muito Útil), o quanto o novo sistema deveria oferecer os seguintes recursos?</label>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Recurso</th>
+                                <th>0 (Inútil)</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5 (Muito Útil)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Visualizar o estoque real da loja pelo celular (online)</td>
+                                <td><input type="radio" name="grid_estoque" value="0" required></td>
+                                <td><input type="radio" name="grid_estoque" value="1"></td>
+                                <td><input type="radio" name="grid_estoque" value="2"></td>
+                                <td><input type="radio" name="grid_estoque" value="3"></td>
+                                <td><input type="radio" name="grid_estoque" value="4"></td>
+                                <td><input type="radio" name="grid_estoque" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>Ter um catálogo online com fotos e especificações detalhadas das peças</td>
+                                <td><input type="radio" name="grid_fotos" value="0" required></td>
+                                <td><input type="radio" name="grid_fotos" value="1"></td>
+                                <td><input type="radio" name="grid_fotos" value="2"></td>
+                                <td><input type="radio" name="grid_fotos" value="3"></td>
+                                <td><input type="radio" name="grid_fotos" value="4"></td>
+                                <td><input type="radio" name="grid_fotos" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>Receber notificações (WhatsApp/SMS) sobre o status do pedido (separado, enviado)</td>
+                                <td><input type="radio" name="grid_alerta" value="0" required></td>
+                                <td><input type="radio" name="grid_alerta" value="1"></td>
+                                <td><input type="radio" name="grid_alerta" value="2"></td>
+                                <td><input type="radio" name="grid_alerta" value="3"></td>
+                                <td><input type="radio" name="grid_alerta" value="4"></td>
+                                <td><input type="radio" name="grid_alerta" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td>Possibilidade de realizar e acompanhar pedidos diretamente por um site ou aplicativo</td>
+                                <td><input type="radio" name="grid_app" value="0" required></td>
+                                <td><input type="radio" name="grid_app" value="1"></td>
+                                <td><input type="radio" name="grid_app" value="2"></td>
+                                <td><input type="radio" name="grid_app" value="3"></td>
+                                <td><input type="radio" name="grid_app" value="4"></td>
+                                <td><input type="radio" name="grid_app" value="5"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2><span>✍️</span>Seção 5: Sugestões Adicionais</h2>
+                <div class="question-group">
+                    <label for="sugestao_mecanico">9. Se você pudesse solicitar uma ÚNICA funcionalidade ou melhoria para esse novo sistema, qual seria?</label>
+                    <textarea id="sugestao_mecanico" name="sugestao_mecanico"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar Respostas</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

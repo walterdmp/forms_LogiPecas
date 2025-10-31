@@ -1,0 +1,327 @@
+/* --- Configuração Geral --- */
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #eef1f6; /* Azul claro muito suave */
+    color: #34495e; /* Azul escuro para texto principal */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex; /* Para centralizar o container */
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    margin: 20px; /* Margem em todos os lados para responsividade */
+    padding: 35px 45px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    animation: fadeIn 0.8s ease-out; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Cabeçalho do Formulário --- */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2em; /* Título maior */
+    font-weight: 700;
+}
+
+.description {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d; /* Cinza médio */
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* --- Seções do Formulário --- */
+.form-section {
+    margin-bottom: 40px;
+    border-top: 1px solid #e0e6ed; /* Linha sutil no topo da seção */
+    padding-top: 30px;
+}
+
+.form-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.form-section h2 {
+    color: #3498db; /* Azul vibrante para títulos de seção */
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.form-section h2 span {
+    margin-right: 12px;
+    font-size: 1.2em; /* Ícone um pouco maior */
+    color: #2980b9; /* Azul mais escuro para o ícone */
+}
+
+/* --- Grupos de Pergunta --- */
+.question-group {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fcfdff; /* Fundo leve para o grupo de perguntas */
+    border: 1px solid #eef1f6;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.question-group:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    border-color: #dbe4ee;
+}
+
+.question-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-size: 1.05em;
+}
+
+/* --- Opções de Rádio (Múltipla Escolha) --- */
+.radio-option {
+    display: flex; /* Alinha rádio e texto */
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.radio-option:hover {
+    background-color: #f5f8fa;
+    border-color: #c9d8e7;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.1); /* Aumenta o rádio button */
+}
+
+/* --- Campos de Texto (Resposta Curta) --- */
+input[type="text"],
+textarea {
+    width: calc(100% - 24px); /* Ajusta para padding */
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #3498db; /* Borda azul ao focar */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* --- Tabela (Grade de Múltipla Escolha) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    overflow: hidden; /* Para bordas arredondadas da tabela */
+}
+
+th, td {
+    border: 1px solid #eef1f6; /* Borda mais fina e clara */
+    padding: 14px 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f6f9; /* Fundo mais claro para cabeçalho */
+    font-size: 0.95em;
+    font-weight: 600;
+    text-align: center;
+    color: #555;
+}
+
+td:first-child {
+    font-weight: 500;
+    font-size: 0.98em;
+    width: 35%; /* Ajuste de largura para a primeira coluna */
+    text-align: left;
+    color: #34495e;
+}
+
+td {
+    text-align: center;
+}
+
+td input[type="radio"] {
+    transform: scale(1.05);
+}
+
+/* --- Botão de Envio --- */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #28a745; /* Verde Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    transform: translateY(-3px); /* Efeito de levantar */
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+/* --- Responsividade Básica --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 25px;
+        margin: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .description {
+        font-size: 1em;
+    }
+    .form-section h2 {
+        font-size: 1.4em;
+    }
+    th, td {
+        padding: 10px 5px;
+        font-size: 0.85em;
+    }
+    td:first-child {
+        width: auto; /* Deixa a largura automática em mobile */
+    }
+    .submit-button {
+        font-size: 1.1em;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    table {
+        font-size: 0.75em; /* Reduz ainda mais em telas muito pequenas */
+    }
+    /* Para grades de rádio em mobile, pode ser melhor empilhar as colunas ou usar selects,
+       mas para HTML/CSS básico, a tabela scrollável ou menor é a opção. */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr { border: 1px solid #ccc; margin-bottom: 10px; }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+    /* Mapeia os cabeçalhos para os dados em cada linha */
+    td:nth-of-type(1):before { content: "Recurso"; }
+    td:nth-of-type(2):before { content: "0 (Inútil)"; }
+    td:nth-of-type(3):before { content: "1"; }
+    td:nth-of-type(4):before { content: "2"; }
+    td:nth-of-type(5):before { content: "3"; }
+    td:nth-of-type(6):before { content: "4"; }
+    td:nth-of-type(7):before { content: "5 (Muito Útil)"; }
+}
+
+/* Ajuste específico para a grade em mobile que não funciona bem */
+@media (max-width: 480px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Permite rolagem horizontal em tabelas grandes */
+        white-space: nowrap; /* Impede que o conteúdo quebre linha */
+    }
+    /* Voltar a exibir como tabela normal, mas com scroll */
+    table, thead, tbody, th, td, tr {
+        display: table-cell; /* Força a exibição de célula */
+        white-space: normal; /* Volta ao normal */
+    }
+    table {
+        width: auto; /* Permite que a tabela seja maior que a tela */
+    }
+    thead {
+        display: table-header-group;
+    }
+    tbody {
+        display: table-row-group;
+    }
+    tr {
+        display: table-row;
+    }
+    th, td {
+        display: table-cell;
+        padding: 8px; /* Ajuste o padding */
+        font-size: 0.8em;
+        white-space: normal; /* Permite que o texto quebre linha nas células */
+    }
+    td:first-child {
+        width: 120px; /* Largura fixa para a primeira coluna em mobile, se necessário */
+        min-width: 120px;
+    }
+    td:before {
+        content: none; /* Remove o label */
+    }
+}
